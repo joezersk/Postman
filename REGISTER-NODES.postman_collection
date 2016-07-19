@@ -1,0 +1,53 @@
+{
+	"id": "c7cf259f-00e1-02a3-c5e3-bd7a5cdd05df",
+	"name": "REGISTER-NODES",
+	"description": "This is a script used to automate Fabric Discovery when you initally set up your ACI Fabric.  It will register spine and leaf nodes by serial number, and assign the node ID and name to each.\n\nThis is a fixed value script specific to my own APIC lab.  To modify for yourself, change the serial numbers and nodes to fit your lab environment.\n\n",
+	"order": [
+		"67e4d3c9-cd5c-fc95-3280-46e1b49770cb",
+		"5419d696-0132-61b7-f2fb-f32048fd3330"
+	],
+	"folders": [],
+	"timestamp": 0,
+	"owner": "186192",
+	"remoteLink": null,
+	"public": false,
+	"requests": [
+		{
+			"folder": null,
+			"id": "5419d696-0132-61b7-f2fb-f32048fd3330",
+			"name": "REGISTER MY NODES",
+			"dataMode": "raw",
+			"data": [],
+			"descriptionFormat": "html",
+			"description": "",
+			"headers": "Content-Type: text/xml\n",
+			"method": "POST",
+			"pathVariables": {},
+			"url": "https://{{apic}}/api/node/mo/uni/controller.xml",
+			"preRequestScript": "",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"collectionId": "c7cf259f-00e1-02a3-c5e3-bd7a5cdd05df",
+			"rawModeData": "<fabricNodeIdentPol>\n<fabricNodeIdentP  serial=\"SAL1918E7YZ\" name=\"leaf-1\" nodeId=\"101\"/>\n<fabricNodeIdentP  serial=\"SAL1918EEPX\" name=\"leaf-2\" nodeId=\"102\"/>\n<fabricNodeIdentP  serial=\"SAL1919EMPL\" name=\"leaf-3\" nodeId=\"103\"/>\n<fabricNodeIdentP  serial=\"SAL1915D9KW\" name=\"spine-1\" nodeId=\"201\"/>\n<fabricNodeIdentP  serial=\"SAL1926J4QW\" name=\"spine-2\" nodeId=\"202\"/>\n</fabricNodeIdentPol>"
+		},
+		{
+			"id": "67e4d3c9-cd5c-fc95-3280-46e1b49770cb",
+			"headers": "Authorization: Basic YWRtaW46Y2lzY28xMjM=\nContent-Type: application/json\n",
+			"url": "https://{{apic}}/api/aaaLogin.json",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1461832633789,
+			"name": "LOGIN APIC",
+			"description": "This is the requires step for Postman to log into APIC to generate the session cookie that will be used in future steps in the collection.  It uses the Postman enviroments feature, which is a way to specify things like APIC IP, Username and Password for various ACI environments.  In this script, I set up environement variables of {{apic}}, {{username}}, and {{password}}\n\nTo set up an environment, click on the upper right area of the Postman app and set it up for your environment(s).",
+			"collectionId": "c7cf259f-00e1-02a3-c5e3-bd7a5cdd05df",
+			"rawModeData": "{\n    \"aaaUser\":{\n        \"attributes\":{\n            \"name\":\"{{username}}\",\n            \"pwd\":\"{{password}}\"\n        }\n    }\n}"
+		}
+	]
+}
