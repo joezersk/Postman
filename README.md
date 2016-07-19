@@ -1,7 +1,13 @@
 # Postman
 Repo for my various Postman scripts so I can share with others.  Note that all collections will first begin with ACI Fabric Login, as it assumes you have not yet done so.  This does not hurt anything if you are already logged in.
 
-Postman Collections:
+Note that all collections also assume that you have already setup a Postman Environment with the following variables already declared and values set (otherwise your login won't work):
+
+apic
+username
+password
+
+<B>Postman Collections:</B>
 <HR>
 <B>Collection #1:  REGISTER ACI NODES</B>
 <BR>
