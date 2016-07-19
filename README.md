@@ -3,9 +3,12 @@ Repo for my various Postman scripts so I can share with others.  Note that all c
 
 Note that all collections also assume that you have already setup a Postman Environment with the following variables already declared and values set (otherwise your login won't work):
 <BR><BR>
-apic <BR>
-username <BR>
-password <BR>
+<INDENT>apic 
+<BR>
+username 
+<BR>
+password 
+<BR>
 
 <HR>
 <B>Postman Collections:</B>
