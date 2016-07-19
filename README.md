@@ -2,10 +2,10 @@
 Repo for my various Postman scripts so I can share with others.  Note that all collections will first begin with ACI Fabric Login, as it assumes you have not yet done so.  This does not hurt anything if you are already logged in.
 
 Note that all collections also assume that you have already setup a Postman Environment with the following variables already declared and values set (otherwise your login won't work):
-
-apic
-username
-password
+<BR>
+apic <BR>
+username <BR>
+password <BR>
 
 <B>Postman Collections:</B>
 <HR>
