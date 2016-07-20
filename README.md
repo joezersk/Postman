@@ -16,3 +16,8 @@ password
 <B>Collection #1:  REGISTER ACI NODES</B>
 <BR>
   -This will register a series of nodes as part of initial fabric discovery, based on serial number, and sets node name and node number.  Note that each environment is unique, so change the values in the body of the POST to your own values.  
+<BR><BR>
+<B>Collection #2:  SET OOB IP ON NODES</B>
+<BR>
+  -This will set the OOB IP addresses for all leafs and spines.  Note that each environment is unique, so change the values in the body of the POST to your own values.  
+  <BR><BR>
