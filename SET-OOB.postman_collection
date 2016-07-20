@@ -1,0 +1,54 @@
+{
+	"id": "315b4bdc-ce1c-4ce6-2788-4198ca3012ab",
+	"name": "SET-OOB",
+	"description": "",
+	"order": [
+		"6740efb8-6d77-d515-6b23-d5a922172aaa",
+		"c0edd871-1ba1-20ba-f386-50945a974d0d"
+	],
+	"folders": [],
+	"timestamp": 0,
+	"owner": "186192",
+	"remoteLink": null,
+	"public": false,
+	"published": false,
+	"requests": [
+		{
+			"folder": null,
+			"id": "6740efb8-6d77-d515-6b23-d5a922172aaa",
+			"name": "LOGIN APIC",
+			"dataMode": "raw",
+			"data": [],
+			"descriptionFormat": "html",
+			"description": "This is the requires step for Postman to log into APIC to generate the session cookie that will be used in future steps in the collection.  It uses the Postman enviroments feature, which is a way to specify things like APIC IP, Username and Password for various ACI environments.  In this script, I set up environement variables of {{apic}}, {{username}}, and {{password}}\n\nTo set up an environment, click on the upper right area of the Postman app and set it up for your environment(s).",
+			"headers": "Authorization: Basic YWRtaW46Y2lzY28xMjM=\nContent-Type: application/xml\n",
+			"method": "POST",
+			"pathVariables": {},
+			"url": "https://{{apic}}/api/aaaLogin.json",
+			"preRequestScript": "",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"collectionId": "315b4bdc-ce1c-4ce6-2788-4198ca3012ab",
+			"rawModeData": "{\n    \"aaaUser\":{\n        \"attributes\":{\n            \"name\":\"{{username}}\",\n            \"pwd\":\"{{password}}\"\n        }\n    }\n}"
+		},
+		{
+			"id": "c0edd871-1ba1-20ba-f386-50945a974d0d",
+			"headers": "Content-Type: application/json\n",
+			"url": "https://{{apic}}/api/node/mo/uni/tn-mgmt/mgmtp-default/oob-default/rsooBStNode-[topology/pod-1/node-{{node-num}}].json",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1461238037531,
+			"name": "SET-OOB-IP",
+			"description": "This is a POST to push an OOB IP address to each of the nodes in an ACI Fabric.  It is set up to work in conjunction with a CSV file that will have the data needed for each node.  The POST will then run recursively, line by line, using the values from the CSV.  It uses variables called {{oob-ip}} and {{node-num}} that should correspond to column titles in the CSV file.  \n\nNote that CSVs created in MS Excel do not seem to work (hidden formatting issues or something), but a CSV created in Google Docs, Apple Numbers, or various Open Office suites seem to work ok.",
+			"collectionId": "315b4bdc-ce1c-4ce6-2788-4198ca3012ab",
+			"rawModeData": "{\"mgmtRsOoBStNode\":{\"attributes\":\n    {\"addr\":\"{{oob-ip}}\",\"tDn\":\"topology/pod-1/node-{{node-num}}\",\"gw\":\"10.50.129.254\",\"status\":\"created,modified\"},\"children\":[]}}"
+		}
+	]
+}
