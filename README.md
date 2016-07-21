@@ -10,7 +10,7 @@ username
 password 
 <BR></I>
 <BR>
-If you don't have one, you can import that environment provided here as file <I>AMS-ACI.postman_environment.<\I>  
+If you don't have one, you can import that environment provided here as file <I>AMS-ACI.postman_environment.</I>  
 <BR>
 Note that after you import this enviroment, that you will have to modify the variable values to match your own ACI setup.
 <BR>
