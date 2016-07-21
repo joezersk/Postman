@@ -16,5 +16,5 @@ Note that after you import this enviroment, that you will have to modify the var
 <BR><BR>
 <B>Collection #2:  SET OOB IP ON NODES</B>
 <BR>
-  -This will set the OOB IP addresses for all leafs and spines.  Note that each environment is unique, so change the values in the body of the POST to your own values.  
+  -This will set the OOB IP addresses for all leafs and spines.  Note that your environment will be different, so change the unique values in the body of the POST to your own values.  
   <BR><BR>
