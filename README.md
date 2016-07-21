@@ -16,5 +16,5 @@ Note that after you import this enviroment, that you will have to modify the var
 <BR><BR>
 <B>Collection #2:  SET OOB IP ON NODES</B>
 <BR>
-  -This will set the OOB IP addresses for all leafs and spines.  Note that your environment will be different, so change the unique values in the body of the POST to your own values.  
+  -This will set the OOB IP addresses for all leafs and spines.  This collection requires the use of an associated CSV file used in the Runner Window of Postman.  You can use the CSV file here and modify it to use your own values.  Please note that for some reason MS Excel CSV files contain some mystery formatting in the file structure and thus break in Postman.  Instead use Libre Office, Google Docs, or Numbers on a Macintosh to make or modify your CSV file.  
   <BR><BR>
