@@ -6,6 +6,9 @@ Repo for my various ACI Postman scripts so I can share with others.  Note that a
 Each of the collections here refers to an existing Postman environment with APIC IP, Username and Password variables already set.
 <BR><BR>
 Note that after you import this enviroment, that you will have to modify the variable values to match your own ACI setup.
+<BR><BR>
+If you prefer, I have recorded a series of short 5-minute videos on using Postman with ACI. <a href="https://www.youtube.com/channel/UCN_MNVF3e05YntJqdldGnvA">You can view the on YouTube by clicking here.</a>
+<BR>
 <BR>
 <HR>
 <B>Postman Collections:</B>
