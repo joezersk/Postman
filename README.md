@@ -1,5 +1,5 @@
 # Postman for ACI
-Repo for my various Postman scripts so I can share with others.  Note that all collections will first begin with ACI Fabric Login, as it assumes you have not yet done so.  This does not hurt anything if you are already logged in.
+Repo for my various ACI Postman scripts so I can share with others.  Note that all collections will first begin with ACI Fabric Login, as it assumes you have not yet done so.  This does not hurt anything if you are already logged in.
 
 <B>You should first import the Postman environment provided here as file <I>AMS-ACI.postman_environment.</I></B>
 <BR><BR>
