@@ -1,7 +1,7 @@
 # Postman
 Repo for my various Postman scripts so I can share with others.  Note that all collections will first begin with ACI Fabric Login, as it assumes you have not yet done so.  This does not hurt anything if you are already logged in.
 
-You should first import the Postman environment provided here as file <I>AMS-ACI.postman_environment.</I>
+<B>You should first import the Postman environment provided here as file <I>AMS-ACI.postman_environment.</I></B>
 <BR><BR>
 Each of the collections here refers to an existing evironment with APIC IP, Username and Password variables already set.
 <BR><BR>
